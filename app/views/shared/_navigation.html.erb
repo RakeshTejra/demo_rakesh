@@ -1,7 +1,7 @@
-<div class="container">
-  <div class="row">
-  	<div class="col-md-12">
-  		<header style="background-color:#E1F5A9; height:100px;">
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <header>
 			<% if signed_in? %>
 			    Logged in as <%= current_user.email %>.<br>
 			    <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
@@ -10,7 +10,6 @@
 			    <%= link_to "Sign in", new_user_session_path %>
 			<% end %>
 	    </header>
-
-	<div>
+    </div>
   </div>
-</div>
+</nav>

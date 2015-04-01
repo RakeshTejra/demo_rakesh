@@ -1,17 +1,38 @@
-<p id="notice"><%= notice %></p>
+<style type="text/css">
 
-<h1>Listing Articles</h1>
+.img {
+  float:left;
+  margin-right: 10px;
+}  
+</style>
+
+<ul class="nav nav-tabs" role="tablist">
+  <li class="active"><%= link_to 'View list', articles_path %></li>
+  <li><%= link_to 'New Article', new_article_path %></li>
+</ul>
+
+
+<h2>Listing Articles</h2>
 
 
     <% @articles.each do |article| %>
      
         <h4><%= article.title %></h4>
-        <p><%= article.body %></p>
-        <%= link_to 'Show', article %>
+        <p class="img">
+          <%= image_tag(article.photo.url, :width => 300, :height => 175) %>
+        </p>
+        <p class="art-body">  
+          <%= article.body %>
+        </p>
+
+        <%= link_to 'Show', article, class: 'btn btn-primary btn-xs' %><br><br>
 
       
     <% end %><br><br>
 
 <% if can? :update, @article %>
-    <%= link_to 'New Article', new_article_path %>
+    <%= link_to new_article_path, class: 'btn btn-success nounderline' do %>
+	  <i class="glyphicon glyphicon-plus"></i> New Article
+	<% end %>
 <% end %>
+
