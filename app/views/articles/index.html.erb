@@ -19,7 +19,7 @@
      
         <h4><%= article.title %></h4>
         <p class="img">
-          <%= image_tag(article.photo.url, :width => 300, :height => 175) %>
+          <%= image_tag(article.photo.url, :width => 300, class: "img-rounded img-responsive") %>
         </p>
         <p class="art-body">  
           <%= article.body %>

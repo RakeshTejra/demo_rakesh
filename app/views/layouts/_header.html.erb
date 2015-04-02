@@ -1,16 +1,15 @@
-<div class="container">
-  <div class="row">
-  	<div class="col-md-12">
-  		<header style="background-color:#E1F5A9; height:100px;">
+<header style="background-color:#BEF6A9; height:100px;">
+	<div class="container">
+        <div class="row">
+          <div class="col-xs-12" style="margin-top:10px;">
 			<% if signed_in? %>
-			    Logged in as <%= current_user.email %>.<br>
+				Logged in as <%= current_user.email %>.<br>
 			    <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
-			    | <%= link_to "Admin", admin_root_path %>
+				| <%= link_to "Admin", admin_root_path %>
 			<% else %>
-			    <%= link_to "Sign in", new_user_session_path %>
+				<%= link_to "Sign in", new_user_session_path %>
 			<% end %>
-	    </header>
-
-	<div>
-  </div>
-</div>
+		  </div>
+		<div>
+	<div>	 	
+</header>
