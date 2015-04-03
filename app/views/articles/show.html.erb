@@ -1,10 +1,10 @@
 <p>
   <strong>Title:</strong>
-  <%= @article.title %>
+  <b><%= @article.title %></b>
 </p>
 
 <p>
-  <%= image_tag(@article.photo.url, :width => 300, :height => 175) %>
+  <%= image_tag(@article.photo.url, :width => 300, :height => 175, class: "img-rounded img-responsive") %>
 </p>
 
 <p>
